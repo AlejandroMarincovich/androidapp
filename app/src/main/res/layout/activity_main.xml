@@ -4,135 +4,154 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
-    android:backgroundTint="#673AB7"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/txtdirec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="#FDF9F9"
-        android:ems="10"
-        android:hint="direcion"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtelefon"
+    <LinearLayout
+        android:layout_width="279dp"
+        android:layout_height="495dp"
+        android:background="@drawable/diseno_box"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/progresobar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771"></LinearLayout>
 
-    <EditText
-        android:id="@+id/txtpass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:background="#00BCD4"
-        android:backgroundTint="#F2F6F6"
-        android:ems="10"
-        android:hint="contraseña"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtdirec"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="168dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="180dp"
+        android:drawableTint="#00F44336"
+        android:text="FORUMAPP"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvNombre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btnEnviar"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
+        android:background="@drawable/diseno_boton"
         android:onClick="Mostrar"
         android:text="MOSTRAR"
         android:textColor="#050505"
         app:layout_constraintBottom_toTopOf="@+id/progresobar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FORMULARIO"
-        app:layout_constraintBottom_toTopOf="@+id/txtdatos"
+    <EditText
+        android:id="@+id/txtedad"
+        android:layout_width="81dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:autoText="true"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="Edad"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtdirec"
+        app:layout_constraintEnd_toEndOf="@+id/txtdirec"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toStartOf="@+id/txtdirec" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnviar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        app:layout_constraintHorizontal_bias="0.399"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
         android:id="@+id/chek_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_width="104dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="4dp"
         android:buttonTint="#0B0000"
         android:checked="true"
         android:clickable="true"
         android:minHeight="48dp"
         android:text="Mostrar informacion"
         app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/txtnombre"
+    <TextView
+        android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="#F4EAEA"
-        android:backgroundTint="#F4EAEA"
-        android:ems="10"
-        android:hint="nombre"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="#131313"
-        app:layout_constraintBottom_toTopOf="@+id/txtpass"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="208dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_alignBottom="@+id/edNombre"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="28dp"
+        android:text="@string/nombre"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/edNombre"
+        app:layout_constraintEnd_toEndOf="@+id/edNombre"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="@+id/edNombre" />
 
     <EditText
         android:id="@+id/txtelefon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_width="148dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="telefono"
         android:inputType="phone"
         android:minHeight="48dp"
+        android:textColor="#131313"
+        android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@+id/chek_info"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/chek_info"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="@+id/chek_info"
+        tools:ignore="TouchTargetSizeCheck" />
 
-    <TextView
-        android:id="@+id/txtdatos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Ingrese sus datos"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/txtnombre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/txtdirec"
+        android:layout_width="146dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Direccion"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtelefon"
+        app:layout_constraintEnd_toEndOf="@+id/txtelefon"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="@+id/txtelefon" />
+
+    <EditText
+
+        android:id="@+id/edNombre"
+        android:layout_width="170dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@+id/tvNombre"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtedad"
+        app:layout_constraintEnd_toEndOf="@+id/txtedad"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="@+id/txtedad"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ProgressBar
         android:id="@+id/progresobar"
@@ -143,7 +162,8 @@
         android:max="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
